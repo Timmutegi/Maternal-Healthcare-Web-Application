@@ -12,11 +12,15 @@
    
     <div class="row justify-content-center">
         <div class="col-md-8">
-             @if(Session::has('message'))
-                <div class="alert alert-dark">
-                    {{ Session::get('message') }}
+            @if (session('profile-updated'))
+                <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                    <strong>Profile Updated</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
             @endif
+
             <div class="card">
                 <div class="card-header">{{ __('User Profile') }}</div>
 

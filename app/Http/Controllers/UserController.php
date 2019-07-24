@@ -37,7 +37,7 @@ class UserController extends Controller
             'phone' => $request->phone,
             'password' => bcrypt($request->password)
         ]);
-
+        session()->flash('profile-updated');
         return back()->with('message', 'Your Profile Has Been Updated');
     }
 }

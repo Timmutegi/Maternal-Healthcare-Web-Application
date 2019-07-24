@@ -16,7 +16,7 @@
                 <li class="nav-item px-3 {{ Request::is('about') ? 'active': ''}}">
                     <a class="nav-link" href="/about">About</a>
                 </li>
-                <li class="nav-itme px-3 {{ Request::is('analytics') ? 'active': ''}}"> 
+                <li class="nav-item px-3 {{ Request::is('analytics') ? 'active': ''}}"> 
                     <a class="nav-link" href="/analytics">Analytics</a>
                 </li>
             </ul>

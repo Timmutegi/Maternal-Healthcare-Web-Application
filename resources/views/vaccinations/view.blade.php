@@ -163,14 +163,15 @@
                     </div>
                 </div>               
             </div> 
-
-            <div class="form-group row mb-0">
-                <div class="col-md-6 offset-md-1">
-                    <a style="margin:20px;" href="{{ url()->previous() }}" class="btn btn-primary">Back</a>  
-                    <a style="margin:20px;" href="{{route('email')}}" class="btn btn-primary">Send Email</a>
-                    <a style="margin:20px;" href="{{route('sms')}}" class="btn btn-primary">Send SMS</a>
+        
+            <div class="about-div">
+                <div class="button-container">
+                    <a href="{{ url()->previous() }}" class="btn btn-primary">Back</a>  
+                    <a href="{{route('email')}}" class="btn btn-primary">Send Email</a>
+                    <a href="{{route('sms')}}" class="btn btn-primary">Send SMS</a>
                 </div>
             </div> 
+           
         </div>  
     </body>
 @endsection()

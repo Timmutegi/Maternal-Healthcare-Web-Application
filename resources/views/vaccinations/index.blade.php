@@ -11,18 +11,19 @@
     </header>
     <br>
 
-    @if(Session::has('message'))
-        <div class="alert alert-dark">
-            {{ Session::get('message') }}
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            @if (session('record-deleted'))
+                <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                    <strong>The record has been deleted</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
         </div>
-    @endif
+    </div>
 
-    @if(Session::has('success'))
-        <div class="alert alert-dark">
-            {{ Session::get('success') }}
-        </div>
-    @endif
-    
     <div class="form-group row mb-2">
         <div class="col-md-6 offset-md-1">
             <button type="button" class="btn btn-primary" onclick="window.location='{{ route('parent')}}'">

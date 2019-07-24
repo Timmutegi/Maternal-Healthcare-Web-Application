@@ -31,14 +31,15 @@ hr {
 }
 
 .button-container {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    /* font-family: Jattestor Demo; */
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-style: solid;
     border-color: black;
-    /* margin-top: 100px; */
-    margin-left: 500px;
-    margin-right: 500px;
+    margin-top: 50px;
+}
+
+.button-container a {
+    margin-right: 30px;
 }
 
 .main-container {
@@ -47,7 +48,7 @@ hr {
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     /* height of your footer */
 }
 

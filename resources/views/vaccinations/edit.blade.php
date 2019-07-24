@@ -4,7 +4,6 @@
 <body>
 <div class="container">
     <br>
- 
     <header>
         <div class="banner">
             <br>
@@ -12,7 +11,22 @@
         </div>
     </header>
     <br>
-        <form action="{{ route('update', ['id' => $vaccination->id], ['child_id' => $child->id], ['parent_id' => $parent->id])}}" method="post" >
+
+     <div class="row justify-content-center">
+        <div class="col-md-8">
+            @if (session('record-updated'))
+                <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                    <strong>The record has been deleted</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+        </div>
+    </div>
+
+
+    <form action="{{ route('update', ['id' => $vaccination->id], ['child_id' => $child->id], ['parent_id' => $parent->id])}}" method="post" >
         {{ csrf_field() }}
 
         <div class="card border-dark mb-3">
@@ -166,13 +180,13 @@
                 </div>
             </div>
         </div>
-        <div class="form-group row mb-0">
-            <div class="col-md-6">
+        <div class="about-div">
+            <div class="button-container">
                 <a style="margin:20px;" href="{{ url()->previous() }}" class="btn btn-primary">Back</a>  
                 <button style="margin:20px;" type="submit" class="btn btn-primary">Update</a>
             </div>
         </div> 
-        </form>
+    </form>
         
 </div>
 </body>

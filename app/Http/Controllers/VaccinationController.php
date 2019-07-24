@@ -94,7 +94,9 @@ class VaccinationController extends Controller
         $vaccination->measles_at_9_months = $request->measles_at_9_months;
         $vaccination->save();
 
-        return redirect('vaccinations')->with('success', 'Record Updated');
+        session()->flash('record-updated');
+
+        return redirect('vaccinations');
         
     }
 
@@ -115,6 +117,7 @@ class VaccinationController extends Controller
     {
         $vaccination = Immunization::findOrFail($id); 
         $vaccination->delete();
-        return redirect('vaccinations')->with('message', 'Record Deleted');
+        session()->flash('record-deleted');
+        return redirect('vaccinations');
     }
 }
