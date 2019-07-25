@@ -36,8 +36,9 @@
 			<img src="{{URL::asset('/images/form.jpg')}}" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">Online Immunization Form</h5>
-					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+					<p class="card-text">The online immunization form makes it easier to manage maternal healthcare records. 
+					As a doctor, you have to be logged in to be able to access this feature.</p>
+					<a href="/vaccinations" class="btn btn-primary">Vaccinations</a>
 				</div>
 			</div>
 		</div>
@@ -46,8 +47,9 @@
 			<img src="{{URL::asset('/images/analytics1.jpg')}}" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">Analytics</h5>
-					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+					<p class="card-text">Are you interested with up to date statistics and information about the state of maternal healthcare in Kenya?
+					You can now easily access this information on this platform.</p>
+					<a href="/analytics" class="btn btn-primary">Analytics</a>
 				</div>
 			</div>
 		</div>
@@ -56,8 +58,9 @@
 			<img src="{{URL::asset('/images/reminder.jpg')}}" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title">Reminders</h5>
-					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+					<p class="card-text">In addition to the online immunization form, our platform enable you as a healthcare worker to send reminders
+					to patients through E-mail and SMS to remind them of the next hospital visit.</p>
+					<a href="/vaccinations" class="btn btn-primary">Vaccinations</a>
 				</div>
 			</div>
 		</div>
