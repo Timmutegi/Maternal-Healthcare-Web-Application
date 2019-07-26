@@ -21,7 +21,7 @@ class SendSMSController extends Controller
         ]);
 
         $username = 'sandbox';
-        $apiKey   = '26965282baca5f07ff0296900ffa1771efa51637033026d86c34129716897188';
+        $apiKey   = 'bfdad6d3d1ead4ee9589c6f7726584e94dfd306ca6df32f45f10ad4f24426f94';
         $AT       = new AfricasTalking($username, $apiKey);
 
         // Get one of the services

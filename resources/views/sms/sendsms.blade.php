@@ -8,12 +8,16 @@
                 <div class="card-header">{{ __('Send Reminder') }}</div>
 
                 <div class="card-body">
-                    @if($message = Session::get('success'))
-                        <div class="alert alert-dark alert-block">
-                            <button type="button" class="close" data-dismiss="alert">&times;</button>
-                            <strong>{{ $message }}</strong>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            @if($message = Session::get('success'))
+                                <div class="alert alert-dark alert-block">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <strong>{{ $message }}</strong>
+                                </div>
+                            @endif
                         </div>
-                    @endif
+                    </div>
                     <form method="POST" action="{{ url('sendsms/send') }}">
                         @csrf                                     
 
@@ -21,7 +25,7 @@
                             <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
 
                             <div class="col-md-6">
-                                <input id="phone" type="tel" class="form-control @error('phone') is-invalid @enderror" name="phone" value="+2547" required autocomplete="phone">
+                                <input id="phone" type="tel" class="form-control @error('phone') is-invalid @enderror" name="phone" pattern="^(+254)?(7[0-9]{8})$" placeholder="+2547" required autocomplete="phone" autofocus>
 
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
