@@ -29,6 +29,20 @@ hr {
     display: inline-block;
 }
 
+#card-border p {
+    border: 2px solid black;
+    padding-left: 5px;
+}
+
+#card-border label {
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.card-header {
+    font-weight: bold;
+}
+
 .button-container {
     padding-top: 20px;
     padding-bottom: 20px;

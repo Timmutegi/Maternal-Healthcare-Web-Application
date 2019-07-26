@@ -5,7 +5,7 @@
     <header>
         <div class="banner">
             <br>
-            <h1 Class="whitetitle">MamaFair</h1>
+            <h1 Class="whitetitle">User Profile</h1>
         </div>
     </header>
     <br>

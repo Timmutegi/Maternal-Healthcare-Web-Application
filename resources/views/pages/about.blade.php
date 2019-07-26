@@ -12,7 +12,7 @@
         <div class="about-div">
 			<div class="about">
 				<hr>
-				<p style="font-size:1.875em; ">What is MamaFair?</p>
+				<p style="font-size:1.875em; ">What is MamaFair ?</p>
 				<hr>
 				<p style=" max-width:720px; font-size:1.38em;">Mama Fair is a web application that is aimed at improving maternal health care services and eventually reducing the maternal and infant mortality rate.</p>
 			</div>
