@@ -106,8 +106,12 @@
                 </div>
             </div>
         </div>
-        <a href="{{ url()->previous() }}" class="btn btn-primary">Back</a>       
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="about-div">
+            <div class="button-container">
+                <a style="margin:20px;" href="{{ url()->previous() }}" class="btn btn-primary">Back</a>  
+                <button style="margin:20px;" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div> 
         </form>
 </div>
 </body>

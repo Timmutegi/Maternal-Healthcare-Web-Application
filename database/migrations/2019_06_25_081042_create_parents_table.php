@@ -17,7 +17,7 @@ class CreateParentsTable extends Migration
         Schema::create('parents', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('doctor_id')->unsigned();
-            $table->foreign('doctor_id')->references('id')->on('doctors')->onDelete('cascade');
+            $table->foreign('doctor_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('firstname');
             $table->string('lastname');
             $table->string('surname');

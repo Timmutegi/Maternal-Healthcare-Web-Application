@@ -40,6 +40,7 @@
                         <th>Parent's Full Name</th>
                         <th>Child's Full Name</th>
                         <th>Gender</th>
+                         <th>Child ID</th>
                         <th class="text-center">Actions</th>
                     </tr>
                 </thead>
@@ -50,6 +51,7 @@
                         <td>{{$vaccination->child->parents->firstname}} {{$vaccination->child->parents->lastname}} {{$vaccination->child->parents->surname}}</td>
                         <td>{{$vaccination->child->firstname}} {{$vaccination->child->lastname}} {{$vaccination->child->surname}}</td>
                         <td>{{$vaccination->child->gender}}</td>
+                        <td>{{$vaccination->child->id}}</td>
                         <td>
                         <a style="margin:5px;" class='btn btn-primary' href= "{{route('edit', ['id' => $vaccination->id,'child_id'=>$vaccination->child->id, 'parent_id' => $vaccination->child->parent_id])}}">EDIT</a>
                         <a style="margin:5px;" class='btn btn-primary' href= "{{route('view', ['id' => $vaccination->id, 'child_id'=>$vaccination->child->id, 'parent_id' => $vaccination->child->parent_id])}}">VIEW</a> 
@@ -64,11 +66,10 @@
                 <div class="col-md-6 offset-md-1">
                     {{ $vaccinations->links() }}
                 </div>
-            </div>            
-                          
+            </div>                                     
     </center>   
     @else
-        <p>No vaccinations found</p>
+        <p>No vaccination records found</p>
     @endif
 </div>
 </body>

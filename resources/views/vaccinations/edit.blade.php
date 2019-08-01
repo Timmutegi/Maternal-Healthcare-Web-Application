@@ -26,7 +26,7 @@
     </div>
 
 
-    <form action="{{ route('update', ['id' => $vaccination->id], ['child_id' => $child->id], ['parent_id' => $parent->id])}}" method="post" >
+    <form method="POST" action="{{ route('update', ['id' => $vaccination->id], ['child_id' => $child->id], ['parent_id' => $parent->id])}}">
         {{ csrf_field() }}
         <div id="card-border">
             <div class="card border-dark mb-3">
@@ -184,7 +184,7 @@
         <div class="about-div">
             <div class="button-container">
                 <a style="margin:20px;" href="{{ url()->previous() }}" class="btn btn-primary">Back</a>  
-                <button style="margin:20px;" type="submit" class="btn btn-primary">Update</a>
+                <button style="margin:20px;" type="submit" class="btn btn-primary">Update</button>
             </div>
         </div> 
     </form>

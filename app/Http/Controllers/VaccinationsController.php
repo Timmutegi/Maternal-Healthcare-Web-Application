@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Immunization;
 use App\parents;
-use App\Http\Resources\vaccination as vaccinationResource;
+use App\child;
+use App\Http\Resources\vaccination;
 
 class VaccinationsController extends Controller
 {
@@ -18,7 +19,17 @@ class VaccinationsController extends Controller
      */
     public function show($id)
     {
-        $vaccination = Immunization::findorfail($id);
-        return new VaccinationResource($vaccination);
+        return new vaccination(Immunization::find($id));
+    }
+
+    public function view(Request $request)
+    {
+        $id = $request->input('id');
+
+        $vaccination = Immunization::find($id);
+    
+        return view('vaccinations.viewschedule', [
+            'vaccination' => $vaccination
+        ]);
     }
 }

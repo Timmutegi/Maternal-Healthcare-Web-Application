@@ -35,7 +35,7 @@
                             @enderror
                     </div>
                     <div class="col-md-4">
-                        <label>Surname</label>
+                        <label>Surname*</label>
                         <input type="text" name="surname" class="form-control @error('surname') is-invalid @enderror" id="surname" value="{{ old('surname') }}" required autocomplete="surname" autofocus>
                             @error('surname')
                                 <span class="invalid-feedback" role="alert">
@@ -48,7 +48,7 @@
                 <div class="form-row">
                     <div class="col-md-4">
                         <label>Phone Number*</label>
-                        <input type="tel" name="phone" class="form-control @error('phone') is-invalid @enderror" id="phone" pattern="^(?:254|\+254|0)?(7[0-9]{8})$" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
+                        <input type="tel" name="phone" class="form-control @error('phone') is-invalid @enderror" id="phone" pattern="^(?:254|\+254|0)?(7[0-9]{8})$" value="{{ old('phone') }}" placeholder="0700123456" required autocomplete="phone" autofocus>
                             @error('phone')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -77,12 +77,12 @@
                 </div>
             </div>
         </div>
-        <div class="form-group row mb-0">
-                <div class="col-md-6 offset-md-0">
-                    <a style="margin:20px;" href="{{ url()->previous() }}" class="btn btn-primary">Back</a>  
-                    <button type="submit" class="btn btn-primary">Next Step</button>
-                </div>
-            </div> 
+        <div class="about-div">
+            <div class="button-container">
+                <a style="margin:20px;" href="{{ url()->previous() }}" class="btn btn-primary">Back</a>  
+                <button style="margin:20px;" type="submit" class="btn btn-primary">Next Step</button>
+            </div>
+        </div> 
     </form>
 </div>
 </body>

@@ -37,17 +37,9 @@ Route::post('/vaccinations/create', 'ParentController@store');
 
 Route::post('/vaccinationscreate', 'ChildController@store');
 
-// Route::post('/vaccinations', 'ChildController@store');
-
 Route::post('/vaccinations', 'VaccinationController@store');
 
-// Route::get('/vaccinations/create', 'ParentController@store');
-
-
-// Route::resource('immunizations', 'ImmunizationController');
-
-// Route::resource('vaccinations', 'VaccinationsController');
-
+Route::post('/schedule', 'VaccinationsController@view')->name('fetch');
 
 Auth::routes();
 

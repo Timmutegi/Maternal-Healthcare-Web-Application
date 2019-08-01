@@ -42,7 +42,7 @@
                             @enderror
                     </div>
                     <div class="col-md-4">
-                        <label>Surname</label>
+                        <label>Surname*</label>
                         <input type="text" name="surname" class="form-control @error('surname') is-invalid @enderror" id="surname" value="{{ old('surname') }}" required autocomplete="surname" autofocus>
                             @error('surname')
                                 <span class="invalid-feedback" role="alert">
@@ -67,8 +67,12 @@
                 </div>
             </div>
         </div>
-        <a href="{{ url()->previous() }}" class="btn btn-primary">Back</a>
-        <button type="submit" class="btn btn-primary">Next Step</button>
+        <div class="about-div">
+            <div class="button-container">
+                <a style="margin:20px;" href="{{ url()->previous() }}" class="btn btn-primary">Back</a>  
+                <button style="margin:20px;" type="submit" class="btn btn-primary">Next Step</button>
+            </div>
+        </div> 
     </form>
 </div>
 </body>

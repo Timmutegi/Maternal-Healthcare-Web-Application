@@ -37,7 +37,7 @@
 				<div class="card-body">
 					<h5 class="card-title"><strong>Online Immunization Form</strong></h5>
 					<p style="font-size:1.1em;" class="card-text">The online immunization form makes it easier to manage maternal healthcare records. 
-					This module provides functionality such as the ability easily create, update and delete records.</p>
+					This module provides functionality such as the ability to easily create, update and delete records.</p>
 					<a href="/vaccinations" class="btn btn-primary">Vaccinations</a>
 				</div>
 			</div>
@@ -66,8 +66,39 @@
 		</div>
 	</div>
 	<br><br>
+	<div class="card text-white bg-primary mb-5">
+		<div class="card-header">
+			View Child Immunization Schedule
+		</div>
+		<div class="card-body">
+			<h5 class="card-title">Are you a parent?</h5>
+			<p class="card-text">You can view the immunization schedule of your child by entering the ID of your child below</p>
+			<form method="POST" action="{{ action('VaccinationsController@view')}}">
+				 @csrf
+				<div class="form-group row">
+					<label for="id" class="col-md-2 col-form-label text-md-right">{{ __('ID Number') }}</label>
+
+					<div class="col-md-4">
+						<input id="id" type="number" class="form-control @error('id') is-invalid @enderror" name="id"  value="{{ old('phone') }}" autofocus>
+
+						@error('id')
+							<span class="invalid-feedback" role="alert">
+								<strong>{{ $message }}</strong>
+							</span>
+						@enderror
+					</div>
+				</div>
+				<div class="form-group row mb-0">
+					<div class="col-md-6 offset-md-2">
+						 <button type="submit" class="btn btn-dark">Request Schedule</button>						
+					</div>
+				</div>
+			</form>
+			
+		</div>
+	</div>
 	<div class="about-div">
-		<div class="facts">
+		<div class="facts">			
 			<div style="position:relative; background-color: #F8F8F8; height: 150px; width: 100%;">	
 				<div style="max-width:600px;">
 					<p style="font-size:1.38em ;">"The maternal mortality and infant mortality rate in Kenya have been found to be
