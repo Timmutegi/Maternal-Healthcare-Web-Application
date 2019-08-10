@@ -12,8 +12,14 @@ class VaccinationController extends Controller
 {
     public function index()
     {
+        $doctor_id = Auth::id();
         $vaccinations = Immunization::paginate(10);
-        return view('vaccinations.index')->with('vaccinations', $vaccinations);
+        // return view('vaccinations.index')->with('vaccinations', $vaccinations);
+        return view('vaccinations.index', [
+            'vaccinations' => $vaccinations,
+            'doctor_id' => $doctor_id
+        ]);
+
     }
 
     public function store (Request $request)
