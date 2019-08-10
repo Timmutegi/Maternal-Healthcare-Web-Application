@@ -38,15 +38,15 @@
                <div class="form-row">
                     <div class="col-md-4">
                         <label>OPV</label>
-                        <input type="date" name="opv_at_6_weeks" class="form-control" id="opv_at_6_weeks" required autocomplete="date" autofocus>
+                        <input type="date" name="opv_at_6_weeks" class="form-control" id="opv_at_6_weeks" autocomplete="date" autofocus>
                     </div>
                     <div class="col-md-4">
                         <label>DPT</label>
-                        <input type="date" name="dpt_at_6_weeks" class="form-control" id="dpt_at_6_weeks" required autocomplete="date" autofocus>
+                        <input type="date" name="dpt_at_6_weeks" class="form-control" id="dpt_at_6_weeks" autocomplete="date" autofocus>
                     </div>
                     <div class="col-md-4">
                         <label>PCV</label>
-                        <input type="date" name="pcv_at_6_weeks" class="form-control" id="pcv_at_6_weeks" required autocomplete="date" autofocus>
+                        <input type="date" name="pcv_at_6_weeks" class="form-control" id="pcv_at_6_weeks" autocomplete="date" autofocus>
                     </div>
                 </div>
             </div>
@@ -58,15 +58,15 @@
                <div class="form-row">
                     <div class="col-md-4">
                         <label>OPV</label>
-                        <input type="date" name="opv_at_10_weeks" class="form-control" id="opv_at_10_weeks" required autocomplete="date" autofocus>
+                        <input type="date" name="opv_at_10_weeks" class="form-control" id="opv_at_10_weeks" autocomplete="date" autofocus>
                     </div>
                     <div class="col-md-4">
                         <label>DPT</label>
-                        <input type="date" name="dpt_at_10_weeks" class="form-control" id="dpt_at_10_weeks" required autocomplete="date" autofocus>
+                        <input type="date" name="dpt_at_10_weeks" class="form-control" id="dpt_at_10_weeks" autocomplete="date" autofocus>
                     </div>
                     <div class="col-md-4">
                         <label>PCV</label>
-                        <input type="date" name="pcv_at_10_weeks" class="form-control" id="pcv_at_10_weeks" required autocomplete="date" autofocus>
+                        <input type="date" name="pcv_at_10_weeks" class="form-control" id="pcv_at_10_weeks" autocomplete="date" autofocus>
                     </div>
                 </div>
             </div>
@@ -78,15 +78,15 @@
                <div class="form-row">
                     <div class="col-md-4">
                         <label>OPV</label>
-                        <input type="date" name="opv_at_14_weeks" class="form-control" id="opv_at_14_weeks" required autocomplete="date" autofocus>
+                        <input type="date" name="opv_at_14_weeks" class="form-control" id="opv_at_14_weeks" autocomplete="date" autofocus>
                     </div>
                     <div class="col-md-4">
                         <label>DPT</label>
-                        <input type="date" name="dpt_at_14_weeks" class="form-control" id="dpt_at_14_weeks" required autocomplete="date" autofocus>
+                        <input type="date" name="dpt_at_14_weeks" class="form-control" id="dpt_at_14_weeks" autocomplete="date" autofocus>
                     </div>
                     <div class="col-md-4">
                         <label>PCV</label>
-                        <input type="date" name="pcv_at_14_weeks" class="form-control" id="pcv_at_14_weeks" required autocomplete="date" autofocus>
+                        <input type="date" name="pcv_at_14_weeks" class="form-control" id="pcv_at_14_weeks" autocomplete="date" autofocus>
                     </div>
                 </div>
             </div>
@@ -98,11 +98,11 @@
                <div class="form-row">
                     <div class="col-md-6">
                         <label>Measles</label>
-                        <input type="date" name="measles_at_9_months" class="form-control" id="measles_at_9_months" required autocomplete="date" autofocus>
+                        <input type="date" name="measles_at_9_months" class="form-control" id="measles_at_9_months" autocomplete="date" autofocus>
                     </div>
                     <div class="col-md-6">
                         <label>Yellow Fever</label>
-                        <input type="date" name="yellow_fever_at_9_months" class="form-control" id="yellow_fever_at_9_months" required autocomplete="date" autofocus>
+                        <input type="date" name="yellow_fever_at_9_months" class="form-control" id="yellow_fever_at_9_months" autocomplete="date" autofocus>
                     </div>
                 </div>
             </div>
