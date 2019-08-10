@@ -20,7 +20,7 @@ class VaccinationController extends Controller
     {
         $vaccination = new Immunization;
 
-        $vaccination->child_id = 1;
+        $vaccination->child_id = $request->input('child_id');
         $vaccination->bcg_at_birth = $request->input('bcg_at_birth');
         $vaccination->opv_at_birth = $request->input('opv_at_birth');
         $vaccination->opv_at_6_weeks = $request->input('opv_at_6_weeks');
@@ -37,6 +37,7 @@ class VaccinationController extends Controller
 
         
         $vaccination->save();
+        session()->flash('record-created');
 
         return redirect('vaccinations');
     }
@@ -54,31 +55,12 @@ class VaccinationController extends Controller
         ]);
     }
 
-    public function update(Request $request, $id, $child_id, $parent_id)
+    public function update(Request $request, $id)
     {
         // dd($request->all());
-        $parent = parents::find($parent_id);
-        
-        $parent->doctor_id = Auth::id();
-        $parent->firstname = $request->input('firstname');
-        $parent->lastname = $request->input('lastname');
-        $parent->surname = $request->input('surname');
-        $parent->phone = $request->input('phone');
-        $parent->email = $request->input('email');
-        $parent->gender = $request->input('gender');
-        $parent->save();
-
-        $baby = child::find($child_id);
-        
-        $baby->firstname = $request->input('firstname1');
-        $baby->lastname = $request->input('lastname1');
-        $baby->surname = $request->input('surname1');
-        $baby->gender = $request->input('gender1');
-        $baby->dob = $request->input('dob');
-        $baby->save();
-
-
+  
         $vaccination = Immunization::find($id);
+        
         $vaccination->bcg_at_birth = $request->bcg_at_birth;
         $vaccination->opv_at_birth = $request->opv_at_birth;
         $vaccination->opv_at_6_weeks = $request->opv_at_6_weeks;
@@ -93,6 +75,30 @@ class VaccinationController extends Controller
         $vaccination->yellow_fever_at_9_months = $request->yellow_fever_at_9_months;
         $vaccination->measles_at_9_months = $request->measles_at_9_months;
         $vaccination->save();
+
+        $child_id = $vaccination->child_id;
+
+        $baby = child::find($child_id);
+
+        $baby->firstname = $request->input('firstname1');
+        $baby->lastname = $request->input('lastname1');
+        $baby->surname = $request->input('surname1');
+        $baby->gender = $request->input('gender1');
+        $baby->dob = $request->input('dob');
+        $baby->save();
+
+        $parent_id = $baby->parent_id;
+
+        $parent = parents::find($parent_id);
+
+        $parent->doctor_id = Auth::id();
+        $parent->firstname = $request->input('firstname');
+        $parent->lastname = $request->input('lastname');
+        $parent->surname = $request->input('surname');
+        $parent->phone = $request->input('phone');
+        $parent->email = $request->input('email');
+        $parent->gender = $request->input('gender');
+        $parent->save();
 
         session()->flash('record-updated');
 

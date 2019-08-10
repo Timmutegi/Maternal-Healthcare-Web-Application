@@ -72,6 +72,9 @@
 		</div>
 		<div class="card-body">
 			<h5 class="card-title">Are you a parent?</h5>
+			@if (session('error'))
+			<div class="alert alert-danger">{{ session('error') }}</div>
+			@endif
 			<p class="card-text">You can view the immunization schedule of your child by entering the ID of your child below</p>
 			<form method="POST" action="{{ action('VaccinationsController@view')}}">
 				 @csrf
@@ -79,7 +82,7 @@
 					<label for="id" class="col-md-2 col-form-label text-md-right">{{ __('ID Number') }}</label>
 
 					<div class="col-md-4">
-						<input id="id" type="number" class="form-control @error('id') is-invalid @enderror" name="id"  value="{{ old('phone') }}" autofocus>
+						<input id="id" type="number" class="form-control @error('id') is-invalid @enderror" name="id"  value="{{ old('phone') }}" placeholder="Child Id" autofocus>
 
 						@error('id')
 							<span class="invalid-feedback" role="alert">
@@ -90,7 +93,7 @@
 				</div>
 				<div class="form-group row mb-0">
 					<div class="col-md-6 offset-md-2">
-						 <button type="submit" class="btn btn-dark">Request Schedule</button>						
+						<button type="submit" class="btn btn-dark">Request Schedule</button>						
 					</div>
 				</div>
 			</form>

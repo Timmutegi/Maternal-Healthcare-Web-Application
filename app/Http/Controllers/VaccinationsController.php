@@ -8,6 +8,7 @@ use App\Immunization;
 use App\parents;
 use App\child;
 use App\Http\Resources\vaccination;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class VaccinationsController extends Controller
 {
@@ -25,9 +26,11 @@ class VaccinationsController extends Controller
     public function view(Request $request)
     {
         $id = $request->input('id');
-
-        $vaccination = Immunization::find($id);
-    
+        try {
+            $vaccination = Immunization::findOrFail($id);
+        } catch (ModelNotFoundException $exception){
+            return back()->withError('Record Not Found for ID ' .$id);
+        }
         return view('vaccinations.viewschedule', [
             'vaccination' => $vaccination
         ]);

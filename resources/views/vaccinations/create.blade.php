@@ -21,6 +21,7 @@
                 <div class="form-row">
                     <div class="col-md-6">
                         <label>BCG*</label>
+                        <input type="hidden" name="child_id" value="{{ $child_id }}">
                         <input type="date" name="bcg_at_birth" class="form-control" id="bcg_at_birth" required autocomplete="date" autofocus>
                     </div>
                     <div class="col-md-6">

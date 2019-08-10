@@ -36,7 +36,9 @@ class ParentController extends Controller
 
         $parent->save();
 
-        return view('vaccinations.createchild')->with('success', 'Parent Created');
+        $parent_id = $parent->id;
+
+        return view('vaccinations.createchild')->with('parent_id', $parent_id);
 
     }
 

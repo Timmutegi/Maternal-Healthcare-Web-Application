@@ -25,6 +25,7 @@
                 <div class="form-row">
                     <div class="col-md-4">
                         <label>First Name*</label>
+                        <input type="hidden" name="parent_id" value="{{ $parent_id }}">
                         <input type="text" name="firstname" class="form-control @error('firstname') is-invalid @enderror" id="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" autofocus>
                             @error('firstname')
                                 <span class="invalid-feedback" role="alert">

@@ -24,6 +24,33 @@
         </div>
     </div>
 
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            @if (session('record-created'))
+                <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                    <strong>The record has been successfuly created</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+        </div>
+    </div>
+
+     <div class="row justify-content-center">
+        <div class="col-md-8">
+            @if (session('record-updated'))
+                <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                    <strong>The record has been successfuly updated</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+        </div>
+    </div>
+
+
     <div class="form-group row mb-2">
         <div class="col-md-6 offset-md-1">
             <button type="button" class="btn btn-primary" onclick="window.location='{{ route('parent')}}'">

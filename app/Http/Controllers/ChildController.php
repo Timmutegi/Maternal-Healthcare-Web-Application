@@ -23,7 +23,7 @@ class ChildController extends Controller
         ]);
 
         $baby = new child();
-        $baby->parent_id = 1;
+        $baby->parent_id = $request->input('parent_id');
         $baby->firstname = $request->input('firstname');
         $baby->lastname = $request->input('lastname');
         $baby->surname = $request->input('surname');
@@ -32,7 +32,9 @@ class ChildController extends Controller
 
         $baby->save();
 
-        return view('vaccinations.create');
+        $child_id = $baby->id;
+
+        return view('vaccinations.create')->with('child_id', $child_id);
     }
 
 }
