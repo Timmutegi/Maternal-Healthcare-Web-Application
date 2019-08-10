@@ -82,7 +82,7 @@
 					<label for="id" class="col-md-2 col-form-label text-md-right">{{ __('ID Number') }}</label>
 
 					<div class="col-md-4">
-						<input id="id" type="number" class="form-control @error('id') is-invalid @enderror" name="id"  value="{{ old('phone') }}" placeholder="Child Id" autofocus>
+						<input id="id" type="number" class="form-control @error('id') is-invalid @enderror" name="id"  value="{{ old('phone') }}" placeholder="Child Id">
 
 						@error('id')
 							<span class="invalid-feedback" role="alert">
