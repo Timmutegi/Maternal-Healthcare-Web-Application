@@ -20,17 +20,17 @@ class CreateImmunizationsTable extends Migration
             $table->foreign('child_id')->references('id')->on('children')->onDelete('cascade');      
             $table->datetime('bcg_at_birth');
             $table->datetime('opv_at_birth');
-            $table->datetime('opv_at_6_weeks');
-            $table->datetime('opv_at_10_weeks');
-            $table->datetime('opv_at_14_weeks');
-            $table->datetime('dpt_at_6_weeks');
-            $table->datetime('dpt_at_10_weeks');
-            $table->datetime('dpt_at_14_weeks');
-            $table->datetime('pcv_at_6_weeks');
-            $table->datetime('pcv_at_10_weeks');
-            $table->datetime('pcv_at_14_weeks');
-            $table->datetime('yellow_fever_at_9_months');
-            $table->datetime('measles_at_9_months');
+            $table->datetime('opv_at_6_weeks')->nullable();
+            $table->datetime('opv_at_10_weeks')->nullable();
+            $table->datetime('opv_at_14_weeks')->nullable();
+            $table->datetime('dpt_at_6_weeks')->nullable();
+            $table->datetime('dpt_at_10_weeks')->nullable();
+            $table->datetime('dpt_at_14_weeks')->nullable();
+            $table->datetime('pcv_at_6_weeks')->nullable();
+            $table->datetime('pcv_at_10_weeks')->nullable();
+            $table->datetime('pcv_at_14_weeks')->nullable();
+            $table->datetime('yellow_fever_at_9_months')->nullable();
+            $table->datetime('measles_at_9_months')->nullable();
             $table->timestamps();
         });
         
