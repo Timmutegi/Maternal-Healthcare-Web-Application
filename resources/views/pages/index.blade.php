@@ -3,18 +3,7 @@
 @section('content')
 <body>
 <div class="container">
-	              
-	@if (session('message'))
-		<div class="alert alert-dark alert-dismissible fade show" role="alert">
-			<strong>Hey !</strong> You are now logged in.
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
-	@endif
-
-       
-    
+   
 	<header>
         <div class="banner">
             <br>
@@ -22,6 +11,19 @@
         </div>
     </header>
 	<br>
+	<div class="row justify-content-center">
+		<div class="col-md-8">
+			@if (session('message'))
+				<div class="alert alert-success alert-dismissible fade show" role="alert">
+					<strong> You are now logged in.</strong>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			@endif
+		</div>
+	</div>
+   
 	<div class="about-div">
 		<div class="about">
 			<hr>
