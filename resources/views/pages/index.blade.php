@@ -40,7 +40,7 @@
 					<h5 class="card-title"><strong>Online Immunization Form</strong></h5>
 					<p style="font-size:1.1em;" class="card-text">The online immunization form makes it easier to manage maternal healthcare records. 
 					This module provides functionality such as the ability to easily create, update and delete records.</p>
-					<a href="/vaccinations" class="btn btn-primary">Vaccinations</a>
+					<a id="create" href="/vaccinations" class="btn btn-primary">Vaccinations</a>
 				</div>
 			</div>
 		</div>
@@ -51,7 +51,7 @@
 					<h5 class="card-title"><strong>Analytics</strong></h5>
 					<p style="font-size:1.1em;" class="card-text">Are you interested with up to date statistics and information about the state of maternal healthcare in Kenya?
 					You can now easily access this information on this platform by clicking on the link below.</p>
-					<a href="/analytics" class="btn btn-primary">Analytics</a>
+					<a id="create" href="/analytics" class="btn btn-primary">Analytics</a>
 				</div>
 			</div>
 		</div>
@@ -62,13 +62,13 @@
 					<h5 class="card-title"><strong>Reminders</strong></h5>
 					<p style="font-size:1.1em;" class="card-text">In addition to the online immunization form, our platform enable you as a healthcare worker to send reminders
 					to patients through E-mail and SMS to remind them of the next hospital visit.</p>
-					<a href="/vaccinations" class="btn btn-primary">Vaccinations</a>
+					<a id="create" href="/vaccinations" class="btn btn-primary">Vaccinations</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<br><br>
-	<div class="card text-white bg-primary mb-5">
+	<div class="card text-white mb-5" id="create">
 		<div class="card-header">
 			View Child Immunization Schedule
 		</div>

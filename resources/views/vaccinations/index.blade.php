@@ -53,12 +53,12 @@
 
     <div class="form-group row mb-2">
         <div class="col-md-6 offset-md-1">
-            <button type="button" class="btn btn-primary" onclick="window.location='{{ route('parent')}}'">
+            <button id="create" type="button" class="btn btn-primary" onclick="window.location='{{ route('parent')}}'">
                 {{ __('Create Vaccination Record') }}
             </button>
         </div>
     </div>
-
+    <br>
     <center>
     @if(count($vaccinations) > 0)
         @foreach ($vaccinations as $test)
@@ -81,11 +81,11 @@
                                 <td>{{$vaccination->child->parents->firstname}} {{$vaccination->child->parents->lastname}} {{$vaccination->child->parents->surname}}</td>
                                 <td>{{$vaccination->child->firstname}} {{$vaccination->child->lastname}} {{$vaccination->child->surname}}</td>
                                 <td>{{$vaccination->child->gender}}</td>
-                                <td>{{$vaccination->child->id}}</td>
-                                <td>
-                                    <a style="margin:5px;" class='btn btn-primary' href= "{{route('edit', ['id' => $vaccination->id,'child_id'=>$vaccination->child->id, 'parent_id' => $vaccination->child->parent_id])}}">EDIT</a>
-                                    <a style="margin:5px;" class='btn btn-primary' href= "{{route('view', ['id' => $vaccination->id, 'child_id'=>$vaccination->child->id, 'parent_id' => $vaccination->child->parent_id])}}">VIEW</a> 
-                                    <a style="margin:5px;" class='btn btn-primary' href= "{{route('delete', ['id' => $vaccination->id])}}">DEL</a>                         
+                                <td class="text-center">{{$vaccination->child->id}}</td>
+                                <td class="text-center">
+                                    <a id="create" style="margin-top:1px;" class='btn btn-primary' href= "{{route('edit', ['id' => $vaccination->id,'child_id'=>$vaccination->child->id, 'parent_id' => $vaccination->child->parent_id])}}"><i class="fas fa-edit"></i></a>
+                                    <a id="create" style="margin-top:1px;" class='btn btn-primary' href= "{{route('view', ['id' => $vaccination->id, 'child_id'=>$vaccination->child->id, 'parent_id' => $vaccination->child->parent_id])}}"><i class="fas fa-eye"></i></a> 
+                                    <a id="create" style="margin-top:1px;" class='btn btn-primary' href= "{{route('delete', ['id' => $vaccination->id])}}"><i class="fas fa-trash"></i></a>                         
                                 </td>
                             </tr>
                         @endforeach

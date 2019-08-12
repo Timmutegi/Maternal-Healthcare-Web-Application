@@ -66,12 +66,18 @@ hr {
     /* height of your footer */
 }
 
+#create {
+    background-color: #05577D;
+}
+
 table {
-    width: 75%;
+    width: 80%;
 }
 
 th {
     height: 50px;
+    background-color: #05577D;
+    color: white;
 }
 
 th,
