@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Charts\BCGVaccines;
+use App\Immunization;
 
 class PagesController extends Controller
 {
@@ -14,15 +16,19 @@ class PagesController extends Controller
         return view('pages.about');
     }
 
-    public function immunization(){
-        return view('pages.immunization');
-    }
-
     public function analytics(){
-        return view('pages.analytics');
-    }
+        $bcg = Immunization::where('bcg_at_birth', '>', 0)->count();
+        $opv = Immunization::where('opv_at_birth', '>', 0)->count();
 
-    public function profile(){
-        return view('pages.profile');   
+        $chart = new BCGVaccines;
+
+        $chart->labels(['BCG', 'OPV']);
+        $chart->dataset('Vaccines Given', 'column', [$bcg, $opv])->options([
+            'color' => '#008080',
+        ]);
+
+        return view('pages.analytics', [
+            'chart' => $chart
+        ]);
     }
 }
