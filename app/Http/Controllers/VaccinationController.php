@@ -14,7 +14,6 @@ class VaccinationController extends Controller
     {
         $doctor_id = Auth::id();
         $vaccinations = Immunization::paginate(10);
-        // return view('vaccinations.index')->with('vaccinations', $vaccinations);
         return view('vaccinations.index', [
             'vaccinations' => $vaccinations,
             'doctor_id' => $doctor_id
@@ -117,6 +116,8 @@ class VaccinationController extends Controller
         $vaccination = Immunization::find($id);
         $parent = parents::find($parent_id);
         $child = child::find($child_id);
+
+        session(['child_id' => $child_id]);
  
         return view('vaccinations.view', [
             'vaccination' => $vaccination,

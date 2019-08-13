@@ -21,6 +21,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
+                                <input type="hidden" name="child_id" value="{{ $child_id }}">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="...Your name" required autocomplete="firstname" autofocus>
 
                                 @error('name')
@@ -35,7 +36,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Recipient's Email" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -55,7 +56,7 @@
                         
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <a href="{{ url()->previous() }}" class="btn btn-primary">Back</a>  
+                                <a href="/vaccinations" class="btn btn-primary">Back</a>  
                                 <button style="margin:20px;" type="submit" class="btn btn-primary">
                                     {{ __('Send Email') }}
                                 </button>

@@ -10,7 +10,8 @@ class sendEmailController extends Controller
 {
     public function index()
     {
-        return view('emails.sendreminder');
+        $child_id = session('child_id');
+        return view('emails.sendreminder')->with('child_id', $child_id);
     }
 
     public function send(Request $request)
@@ -21,7 +22,8 @@ class sendEmailController extends Controller
         ]);
         $data = array(
             'name' => $request->name,
-            'date' => $request->date
+            'date' => $request->date,
+            'child_id' => $request->child_id
         );
 
         $email =$request->email;

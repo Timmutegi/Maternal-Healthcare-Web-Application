@@ -61,55 +61,43 @@
     <br>
     <center>
     @if(count($vaccinations) > 0)
-        @foreach ($vaccinations as $test)
-            @if ($test->child->parents->doctor_id == $doctor_id)
-                <table id="table" class="display">
-                    <thead>
+        <table id="table" class="display">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Parent's Full Name</th>
+                    <th>Child's Full Name</th>
+                    <th>Gender</th>
+                        <th>Child ID</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>                    
+                @foreach ($vaccinations as $vaccination)
+                    @if ($vaccination->child->parents->doctor_id == $doctor_id)
                         <tr>
-                            <th>#</th>
-                            <th>Parent's Full Name</th>
-                            <th>Child's Full Name</th>
-                            <th>Gender</th>
-                                <th>Child ID</th>
-                            <th class="text-center">Actions</th>
+                            <td>{{$loop->iteration}}</td>                
+                            <td>{{$vaccination->child->parents->firstname}} {{$vaccination->child->parents->lastname}} {{$vaccination->child->parents->surname}}</td>
+                            <td>{{$vaccination->child->firstname}} {{$vaccination->child->lastname}} {{$vaccination->child->surname}}</td>
+                            <td>{{$vaccination->child->gender}}</td>
+                            <td class="text-center">{{$vaccination->child->id}}</td>
+                            <td class="text-center">
+                                <a id="create" style="margin-top:1px;" class='btn btn-primary' href= "{{route('edit', ['id' => $vaccination->id,'child_id'=>$vaccination->child->id, 'parent_id' => $vaccination->child->parent_id])}}"><i class="fas fa-edit"></i></a>
+                                <a id="create" style="margin-top:1px;" class='btn btn-primary' href= "{{route('view', ['id' => $vaccination->id, 'child_id'=>$vaccination->child->id, 'parent_id' => $vaccination->child->parent_id])}}"><i class="fas fa-eye"></i></a> 
+                                <a id="create" style="margin-top:1px;" class='btn btn-primary' href= "{{route('delete', ['id' => $vaccination->id])}}"><i class="fas fa-trash"></i></a>                         
+                            </td>
                         </tr>
-                    </thead>
-                    <tbody>                    
-                        @foreach ($vaccinations as $vaccination)
-                            <tr>
-                                <td>{{$loop->iteration}}</td>                
-                                <td>{{$vaccination->child->parents->firstname}} {{$vaccination->child->parents->lastname}} {{$vaccination->child->parents->surname}}</td>
-                                <td>{{$vaccination->child->firstname}} {{$vaccination->child->lastname}} {{$vaccination->child->surname}}</td>
-                                <td>{{$vaccination->child->gender}}</td>
-                                <td class="text-center">{{$vaccination->child->id}}</td>
-                                <td class="text-center">
-                                    <a id="create" style="margin-top:1px;" class='btn btn-primary' href= "{{route('edit', ['id' => $vaccination->id,'child_id'=>$vaccination->child->id, 'parent_id' => $vaccination->child->parent_id])}}"><i class="fas fa-edit"></i></a>
-                                    <a id="create" style="margin-top:1px;" class='btn btn-primary' href= "{{route('view', ['id' => $vaccination->id, 'child_id'=>$vaccination->child->id, 'parent_id' => $vaccination->child->parent_id])}}"><i class="fas fa-eye"></i></a> 
-                                    <a id="create" style="margin-top:1px;" class='btn btn-primary' href= "{{route('delete', ['id' => $vaccination->id])}}"><i class="fas fa-trash"></i></a>                         
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table> 
-                <br>
-                <div class="form-group row mb-2">
-                    <div class="col-md-6 offset-md-1">
-                        {{ $vaccinations->links() }}
-                    </div>
-                </div>                                     
-            @else
-            <br>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-body">
-                        <h3> No Vaccination Records Found.<h3>
-                        </div>
-                    </div>
-                </div>
+                    @else
+                    @endif
+                @endforeach
+            </tbody>
+        </table> 
+        <br>
+        <div class="form-group row mb-2">
+            <div class="col-md-6 offset-md-1">
+                {{ $vaccinations->links() }}
             </div>
-            @endif
-        @endforeach   
+        </div>                                     
     @else
     <br>
     <div class="row justify-content-center">
