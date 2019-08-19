@@ -15,7 +15,7 @@ Route::get('/', 'PagesController@index');
 
 Route::get('/about', 'PagesController@about');
 
-Route::get('/analytics', 'PagesController@analytics');
+Route::get('/analytics', 'PagesController@analytics')->middleware('auth');
 
 Route::get('/profile', 'UserController@edit');
 
