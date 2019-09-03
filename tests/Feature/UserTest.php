@@ -25,6 +25,7 @@ class UserTest extends TestCase
 
     public function testAnalytics()
     {
+        $this->withoutMiddleware();
         $response = $this->get('/analytics');
 
         $response->assertStatus(200);

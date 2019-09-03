@@ -107,6 +107,13 @@ class PagesController extends Controller
             'color' => '#008080',
         ]);
 
+        $allVaccines = new at6weeks;
+        $allVaccines->labels(['BCG', 'OPV','DPT1','PCV1','OPV1','DPT2','PCV2','OPV2', 'DPT3', 'PCV3', 'OPV3','Measles','Yellow Fever']);
+        $allVaccines->dataset('Total Vaccines Given', 'line', [$bcg_at_birth, $opv_at_birth, $dpt_at_6_weeks, $pcv_at_6_weeks, $opv_at_6_weeks, $dpt_at_10_weeks, $pcv_at_10_weeks, $opv_at_10_weeks, $dpt_at_14_weeks, $pcv_at_14_weeks, $opv_at_14_weeks, $measles, $yellowfever])->options([
+            'color' => '#008080',
+        ]);
+
+
 
 
         // Rendering of Analytics
@@ -121,6 +128,7 @@ class PagesController extends Controller
             'chart6' => $at_14_pie,
             'chart7' => $at_9months_chart,
             'chart8' => $at_9months_pie,
+            'chart9' => $allVaccines,
 
         ]);
     }

@@ -11,7 +11,7 @@
         </header><br>
         <div class="chart">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-header">
                             At Birth
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="card mb-3">
                         <div class="card-header">
                             At Birth
@@ -31,10 +31,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class=col-md-6>
+                <div class=col-md-4>
                     <div class="card mb-4">
                         <div class="card-header">
                             6 Weeks
@@ -44,7 +41,10 @@
                         </div>
                     </div>
                 </div>
-                <div class=col-md-6>
+            </div>
+
+            <div class="row">
+                <div class=col-md-4>
                     <div class="card mb-4">
                         <div class="card-header">
                             6 Weeks
@@ -54,10 +54,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class=col-md-6>
+                <div class=col-md-4>
                     <div class="card mb-4">
                         <div class="card-header">
                             10 Weeks
@@ -67,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-                <div class=col-md-6>
+                <div class=col-md-4>
                     <div class="card mb-4">
                         <div class="card-header">
                             10 Weeks
@@ -80,7 +77,7 @@
             </div>
 
             <div class="row">
-                <div class=col-md-6>
+                <div class=col-md-4>
                     <div class="card mb-4">
                         <div class="card-header">
                             14 Weeks
@@ -90,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class=col-md-6>
+                <div class=col-md-4>
                     <div class="card mb-4">
                         <div class="card-header">
                             14 Weeks
@@ -100,10 +97,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class=col-md-6>
+                <div class=col-md-4>
                     <div class="card mb-4">
                         <div class="card-header">
                             9 Months
@@ -113,16 +107,19 @@
                         </div>
                     </div>
                 </div>
-                <div class=col-md-6>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
                     <div class="card mb-4">
                         <div class="card-header">
-                            9 Months
+                            All Vaccines
                         </div>
                         <div class="card-body">
-                            {!! $chart8->container() !!}
+                            {!! $chart9->container() !!}
                         </div>
                     </div>
                 </div>
+              
             </div>
 
         </div>
@@ -138,5 +135,7 @@
      {!! $chart6->script() !!}
      {!! $chart7->script() !!}
      {!! $chart8->script() !!}
+     {!! $chart9->script() !!}
+
 </body>
 @endsection()
