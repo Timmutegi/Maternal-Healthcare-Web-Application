@@ -49,8 +49,8 @@
 			<img src="{{URL::asset('/images/analytics1.jpg')}}" class="card-img-top" alt="...">
 				<div class="card-body">
 					<h5 class="card-title"><strong>Analytics</strong></h5>
-					<p style="font-size:1.1em;" class="card-text">Are you interested with up to date statistics and information about the state of maternal healthcare in Kenya?
-					You can now easily access this information on this platform by clicking on the link below.</p>
+					<p style="font-size:1.1em;" class="card-text">As a doctor, you have access to predictive analytics based on the health records that
+					are captured through the online immunization form such as how many vaccinations have been given. </p>
 					<a id="create" href="/analytics" class="btn btn-primary">Analytics</a>
 				</div>
 			</div>
