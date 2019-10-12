@@ -45,13 +45,13 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
+            // 'url' => env('DATABASE_URL'),
             'host' => 'dbfree.net',
             'port' => '3306',
             'database' => 'mamafairlaravel',
             'username' => 'tesh1234',
             'password' => 'sct212-2103/2015',
-            'unix_socket' => env('DB_SOCKET', ''),
+            // 'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
