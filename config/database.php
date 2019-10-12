@@ -46,7 +46,7 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             // 'url' => env('DATABASE_URL'),
-            'host' => 'dbfree.net',
+            'host' => 'db4free.net',
             'port' => '3306',
             'database' => 'mamafairlaravel',
             'username' => 'tesh1234',
